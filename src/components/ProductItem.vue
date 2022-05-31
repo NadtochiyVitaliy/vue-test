@@ -1,9 +1,9 @@
 <template>
     <article class="catalog-item">
-        <div class="img-holder">
+        <a href="#" class="img-holder">
             <img :src="`https://c.roastmarket.de/media/catalog/product${product._source.image}`"
                 :alt="product._source.image_label">
-        </div>
+        </a>
         <div class="catalog-item-body">
             <span class="item-price">{{ product._source.base_price_amount }} &euro;</span>
             <span class="item-price-second">{{ product._source.base_price_amount }} &euro; / {{
@@ -27,7 +27,7 @@ export default {
         }
     }
 }
-</script>+
+</script>
 
 <style lang="scss">
 .catalog {
@@ -70,19 +70,14 @@ export default {
 }
 
 .img-holder {
+    display: block;
     padding-top: 150%;
     position: relative;
     width: 100%;
     max-width: 100%;
     height: auto;
-    mix-blend-mode: multiply;
     overflow: hidden;
-
-    // &:hover{
-    //     transform: scale(1.5);
-    //     transition: transform;
-    //     transition-duration:1s;
-    // }
+    cursor: pointer;
 
     img {
         position: absolute;
