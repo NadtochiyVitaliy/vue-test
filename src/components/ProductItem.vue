@@ -10,7 +10,7 @@
                     product._source.base_price_base_amount
             }}{{ product._source.base_price_base_unit }} </span>
             <a href="#" class="item-name">{{ product._source.name }}</a>
-            <span>Rating: {{ product._source.yotpo_rating}}</span> 
+            <span class="rating-holder"><div class="icon-holder"></div>({{ product._source.yotpo_rating}})</span> 
         </div>
     </article>
 
@@ -105,6 +105,31 @@ export default {
 .item-price-second {
     font-size: 14px;
     color: #848687;
+}
+
+.rating-holder{
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.icon-holder{
+    position: relative;
+    width: 100px;
+    height: 20px;
+    margin-right: 2px;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url('../assets/stars.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
 }
 
 </style>
