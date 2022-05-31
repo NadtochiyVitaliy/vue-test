@@ -35,7 +35,7 @@ export default {
       filteredItems: [],
       showHeader: true,
       lastScrollPosition: 0,
-      scrollOffset: 40
+      scrollOffset: 40,
     };
   },
   methods: {

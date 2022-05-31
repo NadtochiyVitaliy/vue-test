@@ -1,8 +1,7 @@
 <template>
     <article class="catalog-item">
         <a href="#" class="img-holder">
-            <img :src="`https://c.roastmarket.de/media/catalog/product${product._source.image}`"
-                :alt="product._source.image_label">
+            <img :src="`https://c.roastmarket.de/media/catalog/product${product._source.image}`" :alt="product._source.image_label">
         </a>
         <div class="catalog-item-body">
             <span class="item-price">{{ product._source.base_price_amount }} &euro;</span>
@@ -11,11 +10,9 @@
             <span class="rating-holder"><div class="icon-holder"></div>({{ product._source.yotpo_rating}})</span> 
         </div>
     </article>
-
 </template>
 
 <script>
-
 export default {
     name: 'ProductItem',
     props: {
@@ -135,5 +132,4 @@ export default {
         background-position: center;
     }
 }
-
 </style>
