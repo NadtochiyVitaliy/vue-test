@@ -6,9 +6,7 @@
         </a>
         <div class="catalog-item-body">
             <span class="item-price">{{ product._source.base_price_amount }} &euro;</span>
-            <span class="item-price-second">{{ product._source.base_price_amount }} &euro; / {{
-                    product._source.base_price_base_amount
-            }}{{ product._source.base_price_base_unit }} </span>
+            <span class="item-price-second">{{ product._source.base_price_amount }} &euro; / {{ product._source.base_price_base_unit }} </span>
             <a href="#" class="item-name">{{ product._source.name }}</a>
             <span class="rating-holder"><div class="icon-holder"></div>({{ product._source.yotpo_rating}})</span> 
         </div>
