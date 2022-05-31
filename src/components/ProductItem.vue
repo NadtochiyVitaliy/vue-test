@@ -55,6 +55,8 @@ export default {
     width: calc(100% - 20px);
     margin: 0 10px 10px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: 375px) {
         width: calc(50% - 20px);
@@ -93,6 +95,10 @@ export default {
     padding: 10px;
     background-color: #fff;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .item-price,
